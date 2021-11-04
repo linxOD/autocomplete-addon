@@ -2,6 +2,11 @@
 
 The Add-On was created to add an autocomplete function for https://github.com/projectEndings/staticSearch. Prior to running the following steps staticSearch must be installed according to their documentation.
 
+## Required package
+
+For fetching files and download data the openFile function of package https://github.com/acdh-oeaw/arche_api is required.
+Please install the package prior to setup. 
+
 ## Getting started
 
 Customize the config.txt with line break seperated text.
@@ -25,8 +30,8 @@ Run script.sh in your terminal. Attention! If your main project directory is not
 ## Javascript files
 
 autocomplete.js must be added to your search page.
-autocomplete-download-only.js can be places at any page except the search page. 
-Tha latter is used to reduce loading time so users can immedialty use the search automcomplete when they load the search page. 
+autocomplete-download-only.js can be placed at any page except the search page. 
+Tha latter is used to reduce loading time so users can immedialty use the search automcomplete when they loaded the search page. 
 
 ## CSS
 
