@@ -85,7 +85,7 @@ getItem, getItemMany, download
 // retrieving configruation data as array
 function getConfig() {
     var config = [];
-    openFile("autocomplete-addon-projectEndings/config.txt", (rs) => {
+    openFile("autocomplete-addon/config.txt", (rs) => {
         let conf = rs.split("\n");
         conf.forEach((c) => {
             config.push(c);
@@ -267,7 +267,6 @@ async function download(filepath, directory) {
     openFile(filepath, (rs) => {
         var filenames = rs.split(',');
         filenames.forEach(function(file) {
-            console.log(file);
             if (file.length > 1) {
                 var filename = file.replace(`${directory}/`,'');            
                 openFile(filename, (file) => {
