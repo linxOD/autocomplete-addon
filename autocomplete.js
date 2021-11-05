@@ -50,9 +50,12 @@ searchInput.keyup(() => {
     .replace(']','');
 
     if (searchValue.includes(' ') == true) {
+        console.log(searchValue.length);
         getValueMany(searchValue);
         getItemMany();
-    } else {
+    }
+    else if (searchValue.length > 0) {
+        console.log(searchValue.length);
         getValueSingle(searchValue);
         getItem();
     }
@@ -82,7 +85,7 @@ getItem, getItemMany, download
 // retrieving configruation data as array
 function getConfig() {
     var config = [];
-    openFile("./config.txt", (rs) => {
+    openFile("autocomplete-addon-projectEndings/config.txt", (rs) => {
         let conf = rs.split("\n");
         conf.forEach((c) => {
             config.push(c);
@@ -264,6 +267,7 @@ async function download(filepath, directory) {
     openFile(filepath, (rs) => {
         var filenames = rs.split(',');
         filenames.forEach(function(file) {
+            console.log(file);
             if (file.length > 1) {
                 var filename = file.replace(`${directory}/`,'');            
                 openFile(filename, (file) => {
