@@ -1,3 +1,5 @@
-anyname
-static-search/anyFilename.txt
+auden
 html
+static-search
+stems
+-----

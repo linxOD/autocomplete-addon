@@ -13,16 +13,20 @@ Download and unzip or clone the repository to your project directory.
 
 Customize the config.txt with line break seperated text.
 
-1. Project Name default anyname
-2. Filepath of required filepath txt default "static-search/anyFilename.txt"
-3. Main directory name where your project default "html"
+1. Project Name default "anyname"
+2. Main directory name where your project default "html"
+3. Filepath to staticSearch output directory default "static-search"
+4. Direcotry name where stems json files are stored by staticSearch default "stems"
+5. End of document default "-----" please do not change
 
 Example (do not add quotation marks in your txt):
 
 ```javascript
-"anyname"
-"static-search/anyFilename.txt"
-"html"
+anyname
+html
+static-search
+stems
+-----
 ```
 
 Run script.sh in your terminal. Attention! If your main project directory is not called "html" you have to adapt script.sh to the correct directory name.
